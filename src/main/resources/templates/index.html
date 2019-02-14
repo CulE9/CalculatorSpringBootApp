@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="icon" href="icon.png">
+</head>
+<body bgcolor="#007acc">
+<hr>
+<b>SPRING BOOT CALCULATOR</b>
+<br>
+
+<hr>
+<center>RESULT: <p type="text" th:text="${result}" type="text"></center>
+<br>
+<form method="post" th:action="@{/}" th:object="${operationModel}">
+    <input type="text" th:field="*{a}" placeholder="0"> <input type="text" th:field="*{b}" placeholder="0">
+    <br>
+    CHOOSE OPERATION:
+    <br>
+    <input type="submit" class="button" name="add" value="+">
+    <input type="submit" class="button" name="sub" value="-">
+    <input type="submit" class="button" name="mul" value="*">
+    <input type="submit" class="button" name="div" value="/">
+    <input type="submit" class="button" name="square2" value="^2">
+    <input type="submit" class="button" name="^square3" value="^3">
+    <input type="submit" class="button" name="sqrt" value="sqrt">
+    <input type="submit" class="button" name="fac" value="!">
+    <input type="submit" class="button" name="mod" value="%">
+    <br>
+</form>
+<hr>
+<br>
+
+</body>
+</html>
