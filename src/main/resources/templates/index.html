@@ -7,29 +7,36 @@
 </head>
 <body bgcolor="#007acc">
 <hr>
-<center><b>SPRING BOOT CALCULATOR</b></center>
+<font size="5">
+    <center><b>SPRING BOOT CALCULATOR</b></center>
+</font>
 <br>
 
 <hr>
-<center>RESULT: <p type="text" th:text="${result}"></center>
+<font size="4">
+    <center>RESULT: <p type="text" th:text="${result}"></center>
+</font>
 <br>
-<form method="post" th:action="@{/}" th:object="${operationModel}">
-    <input type="text" th:field="*{a}" placeholder="0">
-    <input type="text" th:field="*{b}" placeholder="0">
-    <br>
-    CHOOSE OPERATION:
-    <br>
-    <input type="submit" class="button" name="add" value="+">
-    <input type="submit" class="button" name="sub" value="-">
-    <input type="submit" class="button" name="mul" value="*">
-    <input type="submit" class="button" name="div" value="/">
-    <input type="submit" class="button" name="square2" value="^2">
-    <input type="submit" class="button" name="^square3" value="^3">
-    <input type="submit" class="button" name="sqrt" value="sqrt">
-    <input type="submit" class="button" name="fac" value="!">
-    <input type="submit" class="button" name="mod" value="%">
-    <br>
-</form>
+<center>
+    <form method="post" th:action="@{/}" th:object="${operationModel}">
+        <input type="text" th:field="*{a}" placeholder="0">
+        <input type="text" th:field="*{b}" placeholder="0">
+        <br>
+        <font size="4">CHOOSE OPERATION:</font>
+        <br>
+        <input type="submit" class="button" name="add" value="&#8721;">
+        <input type="submit" class="button" name="sub" value="&#8722;">
+        <input type="submit" class="button" name="mul" value="&#xd7;">
+        <input type="submit" class="button" name="div" value="&#8725;">
+        <input type="submit" class="button" name="sqr" value="x&#178;">
+        <input type="submit" class="button" name="pow" value="x&#8319;">
+        <input type="submit" class="button" name="sqrt" value="&#8730;">
+        <input type="submit" class="button" name="cbrt" value="&#8731;">
+        <input type="submit" class="button" name="fac" value="&#33;">
+        <input type="submit" class="button" name="mod" value="&#x25;">
+        <br>
+    </form>
+</center>
 <hr>
 <br>
 
