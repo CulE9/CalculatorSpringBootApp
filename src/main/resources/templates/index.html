@@ -7,14 +7,15 @@
 </head>
 <body bgcolor="#007acc">
 <hr>
-<b>SPRING BOOT CALCULATOR</b>
+<center><b>SPRING BOOT CALCULATOR</b></center>
 <br>
 
 <hr>
-<center>RESULT: <p type="text" th:text="${result}" type="text"></center>
+<center>RESULT: <p type="text" th:text="${result}"></center>
 <br>
 <form method="post" th:action="@{/}" th:object="${operationModel}">
-    <input type="text" th:field="*{a}" placeholder="0"> <input type="text" th:field="*{b}" placeholder="0">
+    <input type="text" th:field="*{a}" placeholder="0">
+    <input type="text" th:field="*{b}" placeholder="0">
     <br>
     CHOOSE OPERATION:
     <br>
