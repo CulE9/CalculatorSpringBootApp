@@ -14,25 +14,35 @@ public class CalculatorOperations {
         return a * b;
     }
 
-    public int division(int a, int b) {
-        return a / b;
+    public String division(int a, int b) {
+        if (b == 0) {
+            System.out.println("DEVIDE BY ZERO!");
+            return "DEVIDE BY ZERO!";
+        }
+        return "" + a / (double) b;
     }
 
-    public int sqare2(int a) {
+    public int square(int a) {
         return a * a;
     }
 
-    public int square3(int a) {
-        return a * a * a;
+    public int pow(int a, int b) {
+        return (int) Math.pow(a, b);
     }
 
-    public double squareRoot(double a) {
+    public double squareRoot(int a) {
         return Math.sqrt(a);
     }
 
+    public double cubeRoot(int a) {
+        return Math.sqrt(Math.sqrt(a));
+    }
+
     public int factorial(int a) {
+//        // single line to find factorial
+//        return (a == 1 || a == 0) ? 1 : a * factorial(a - 1);
         int result = 1;
-        for (int i = 2; i <= a ; i++) {
+        for (int i = 2; i <= a; i++) {
             result *= i;
         }
         return result;

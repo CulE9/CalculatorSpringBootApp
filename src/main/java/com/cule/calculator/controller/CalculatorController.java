@@ -44,4 +44,40 @@ public class CalculatorController {
         model.addAttribute("result", calculatorOperations.division(operationModel.getA(), operationModel.getB()));
         return "index";
     }
+
+    @RequestMapping(params = "sqr", method = RequestMethod.POST)
+    public String square(@ModelAttribute("operationModel") OperationModel operationModel, Model model) {
+        model.addAttribute("result", calculatorOperations.square(operationModel.getA()));
+        return "index";
+    }
+
+    @RequestMapping(params = "pow", method = RequestMethod.POST)
+    public String pow(@ModelAttribute("operationModel") OperationModel operationModel, Model model) {
+        model.addAttribute("result", calculatorOperations.pow(operationModel.getA(), operationModel.getB()));
+        return "index";
+    }
+
+    @RequestMapping(params = "sqrt", method = RequestMethod.POST)
+    public String squareRoot(@ModelAttribute("operationModel") OperationModel operationModel, Model model) {
+        model.addAttribute("result", calculatorOperations.squareRoot(operationModel.getA()));
+        return "index";
+    }
+
+    @RequestMapping(params = "cbrt", method = RequestMethod.POST)
+    public String cubeRoot(@ModelAttribute("operationModel") OperationModel operationModel, Model model) {
+        model.addAttribute("result", calculatorOperations.cubeRoot(operationModel.getA()));
+        return "index";
+    }
+
+    @RequestMapping(params = "fac", method = RequestMethod.POST)
+    public String factorial(@ModelAttribute("operationModel") OperationModel operationModel, Model model) {
+        model.addAttribute("result", calculatorOperations.factorial(operationModel.getA()));
+        return "index";
+    }
+
+    @RequestMapping(params = "mod", method = RequestMethod.POST)
+    public String modulo(@ModelAttribute("operationModel") OperationModel operationModel, Model model) {
+        model.addAttribute("result", calculatorOperations.modulo(operationModel.getA(), operationModel.getB()));
+        return "index";
+    }
 }
