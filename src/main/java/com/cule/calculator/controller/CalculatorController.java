@@ -33,4 +33,15 @@ public class CalculatorController {
         return "index";
     }
 
+    @RequestMapping(params = "mul", method = RequestMethod.POST)
+    public String multiplication(@ModelAttribute("operationModel") OperationModel operationModel, Model model) {
+        model.addAttribute("result", calculatorOperations.multiplication(operationModel.getA(), operationModel.getB()));
+        return "index";
+    }
+
+    @RequestMapping(params = "div", method = RequestMethod.POST)
+    public String division(@ModelAttribute("operationModel") OperationModel operationModel, Model model) {
+        model.addAttribute("result", calculatorOperations.division(operationModel.getA(), operationModel.getB()));
+        return "index";
+    }
 }
